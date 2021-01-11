@@ -50,6 +50,7 @@ export default () => {
 | infiniteLoop             | boolean                          | false   | Enable infinite loop. see [Infinite loop limitations](#infinite-loop-limitations)                                                                  |
 | gutter                   | number                           | 0       | Space between cards.                                                                  |
 | showSlither              | boolean                          | false   | If true a slither of next card will be shown.                                         |
+| forcedWidth              | number                           | null   | The item width set by user.                                         |
 | firstAndLastGutter       | boolean                          | false   | If true first and last cards will have twice the space.                               |
 | enablePlaceholder        | boolean                          | false   | If true, component will render `placeholderItem` until children are passed.           |
 | placeholderItem          | node                             | null    | If `enablePlaceholder` is true, this will be rendered until children are passed.      |

@@ -3,6 +3,5 @@ npm-debug.log
 .DS_Store
 .idea
 *.iml
-dist
 gh-build
 yarn-error.log
