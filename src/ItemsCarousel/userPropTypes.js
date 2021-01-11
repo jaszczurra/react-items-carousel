@@ -23,6 +23,11 @@ export default {
   showSlither: PropTypes.bool,
 
   /**
+   * Item width set by user.
+   */
+  forcedWidth: PropTypes.number,
+
+  /**
    * If true first and last items will have twice the space
    */
   firstAndLastGutter: PropTypes.bool,

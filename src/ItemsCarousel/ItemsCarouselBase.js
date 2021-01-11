@@ -100,6 +100,7 @@ class ItemsCarouselBase extends React.Component {
       numberOfCards,
       firstAndLastGutter,
       showSlither,
+      forcedWidth,
       classes,
       calculateActualTranslateX,
     } = this.props;
@@ -125,6 +126,7 @@ class ItemsCarouselBase extends React.Component {
                 gutter,
                 numberOfCards,
                 showSlither,
+                forcedWidth,
               })}
               leftGutter={calculateItemLeftGutter({
                 index,
@@ -163,6 +165,7 @@ class ItemsCarouselBase extends React.Component {
       activePosition,
       springConfig,
       showSlither,
+      forcedWidth,
       rightChevron,
       leftChevron,
       chevronWidth,

@@ -10,7 +10,10 @@ export const calculateItemWidth = ({
   numberOfCards,
   firstAndLastGutter,
   showSlither,
+  forcedWidth,
 }) => {
+  if (forcedWidth) return forcedWidth
+
   let allGutter = gutter * (numberOfCards - 1);
 
   if(showSlither) {
@@ -67,6 +70,7 @@ export const calculateLastPossibleTranslateX = ({
   gutter,
   firstAndLastGutter,
   showSlither,
+  forcedWidth,
 }) => {
   const itemWidth = calculateItemWidth({
     containerWidth,
@@ -74,6 +78,7 @@ export const calculateLastPossibleTranslateX = ({
     numberOfCards,
     firstAndLastGutter,
     showSlither,
+    forcedWidth
   });
 
   const hiddenChildrenLength = (numberOfChildren - numberOfCards);
@@ -96,6 +101,7 @@ export const calculateActiveItemTranslateX = ({
   firstAndLastGutter,
   showSlither,
   infiniteLoop,
+  forcedWidth,
 }) => {
   let gotoIndex = activeItemIndex;
 
@@ -128,6 +134,7 @@ export const calculateActiveItemTranslateX = ({
       gutter,
       firstAndLastGutter,
       showSlither,
+      forcedWidth,
     });
   }
 
@@ -137,6 +144,7 @@ export const calculateActiveItemTranslateX = ({
     numberOfCards,
     firstAndLastGutter,
     showSlither,
+    forcedWidth,
   });
 
   let translateX = itemWidth * gotoIndex + gutter * gotoIndex;

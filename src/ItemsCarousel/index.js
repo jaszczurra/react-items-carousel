@@ -30,6 +30,7 @@ ItemsCarousel.defaultProps = {
   disableSwipe: false,
   firstAndLastGutter: false,
   showSlither: false,
+  forcedWidth: null,
   enablePlaceholder: false,
   activePosition: 'left',
   slidesToScroll: 1,

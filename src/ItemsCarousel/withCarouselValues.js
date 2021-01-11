@@ -16,21 +16,23 @@ const withCarouselValues = () => (Cpmt) => (props) => {
     gutter,
     firstAndLastGutter,
     showSlither,
+    forcedWidth,
   } = props;
 
   const items = React.Children.toArray(children);
+  const elko = calculateNextIndex({
+    activePosition,
+    activeItemIndex,
+    numberOfCards,
+    slidesToScroll,
+    numberOfChildren: items.length,
+  })
 
   return (
     <Cpmt
       {...props}
       items={items}
-      nextItemIndex={calculateNextIndex({
-        activePosition,
-        activeItemIndex,
-        numberOfCards,
-        slidesToScroll,
-        numberOfChildren: items.length,
-      })}
+      nextItemIndex={elko}
       previousItemIndex={calculatePreviousIndex({
         activePosition,
         activeItemIndex,
@@ -47,6 +49,7 @@ const withCarouselValues = () => (Cpmt) => (props) => {
         gutter,
         firstAndLastGutter,
         showSlither,
+        forcedWidth,
       })}
     />
   );

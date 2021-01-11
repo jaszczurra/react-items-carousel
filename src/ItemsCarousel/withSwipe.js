@@ -30,6 +30,7 @@ export default () => (Cpmt) => {
         numberOfCards,
         firstAndLastGutter,
         showSlither,
+        forcedWidth,
         requestToChangeActive,
         activeItemIndex,
       } = this.props;
@@ -40,6 +41,7 @@ export default () => (Cpmt) => {
         numberOfCards,
         firstAndLastGutter,
         showSlither,
+        forcedWidth,
       });
 
       const touchClientX = getFirstTouchClientX(e.changedTouches);
